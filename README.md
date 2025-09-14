@@ -1,6 +1,4 @@
-# hello_world
 This is an example of Hello World website powered by nginx inside a Docker container.
-
 # 1- How to setup Docker
 First we need to ensure that Docker is installed and working. Installation depends on the OS you are running.
 
@@ -94,6 +92,11 @@ docker run -d -p 8080:80 --name hello_world bkarabacak/hello_world:latest
 - -d for detachment mode; container will be running in the background
 - -p is to indicate internal and external ports, 8080 is for external , 80 is for internal port number
 - --name is for naming the container
+
+**Web server is now accessible on http://localhost:8080**
+
+---
+
 You can see if the container is running 
 ```
 docker ps 
