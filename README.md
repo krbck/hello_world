@@ -93,7 +93,7 @@ docker run -d -p 8080:80 --name hello_world bkarabacak/hello_world:latest
 ```
 - -d for detachment mode; container will be running in the background
 - -p is to indicate internal and external ports, 8080 is for external , 80 is for internal port number
-- 
+- --name is for naming the container
 You can see if the container is running 
 ```
 docker ps 
