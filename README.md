@@ -114,6 +114,7 @@ docker stop CONTAINER_ID || docker stop CONTAINER_NAME
 ```
 ---
 To build the image from Dockerfile;
+
 1- Clone the git repository to the device
 ```
 git clone https://github.com/krbck/hello_world.git
