@@ -1,3 +1,4 @@
+
 This is an example of Hello World website powered by nginx inside a Docker container.
 # 1- How to setup Docker
 First we need to ensure that Docker is installed and working. Installation depends on the OS you are running.
@@ -81,8 +82,8 @@ postgres                        latest    b781f3a53e61   13 months ago   432MB
 ubuntu                          latest    edbfe74c41f8   13 months ago   78MB
 redis                           latest    590b81f2fea1   13 months ago   117MB
 mysql                           latest    a82a8f162e18   13 months ago   586MB
-bkarabacak/hello_world          latest    76331fac61d0   20 minutes ago  52.5MB  
-hello_world                     latest    76331fac61d0   20 minutes ago  52.5MB
+bkarabacak/hello_world          latest    76331fac61d0   20 minutes ago  52.5MB  
+hello_world                     latest    76331fac61d0   20 minutes ago  52.5MB
 ```
 
 To run the container
@@ -93,7 +94,7 @@ docker run -d -p 8080:80 --name hello_world bkarabacak/hello_world:latest
 - -p is to indicate internal and external ports, 8080 is for external , 80 is for internal port number
 - --name is for naming the container
 
-**Web server is now accessible on http://localhost:8080**
+**Web server will be accessible on http://localhost:8080**
 
 ---
 
@@ -103,11 +104,30 @@ docker ps
 ```
 Container will be listed with its informations
 ```
-CONTAINER ID   IMAGE         COMMAND                  CREATED         STATUS         PORTS     NAMES  
-836b6fac6a84   hello_world   "/docker-entrypoint.…"   2 seconds ago   Up 2 seconds   80/tcp    graci  
+CONTAINER ID   IMAGE         COMMAND                  CREATED         STATUS         PORTS     NAMES  
+836b6fac6a84   hello_world   "/docker-entrypoint.…"   2 seconds ago   Up 2 seconds   80/tcp    graci  
 ous_herschel
 ```
 To stop the container
 ```
 docker stop CONTAINER_ID || docker stop CONTAINER_NAME
 ```
+---
+To build the image from Dockerfile;
+1- Clone the git repository to the device
+```
+git clone https://github.com/krbck/hello_world.git
+```
+2- Make sure you directory is where the git repository has been cloned
+```
+cd hello_world
+```
+3- Build the Dockerfile
+```
+docker build -t hello_world .
+```
+4- Run the container 
+```
+docker run -d -p 8080:80 --name hello_world hello_world
+```
+**Web server will be accessible on  [http://localhost:8080](http://localhost:8080/)**
