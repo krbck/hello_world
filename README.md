@@ -119,7 +119,7 @@ To build the image from Dockerfile;
 ```
 git clone https://github.com/krbck/hello_world.git
 ```
-2- Make sure you directory is where the git repository has been cloned
+2- Make sure your directory is where the git repository has been cloned
 ```
 cd hello_world
 ```
